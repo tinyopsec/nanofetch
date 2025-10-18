@@ -1,5 +1,5 @@
 
-# 🚀 qFetch CLI
+# 🚀 Nanofetch
 
 <div align="center">
 
