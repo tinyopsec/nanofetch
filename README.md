@@ -67,7 +67,7 @@ User configuration (created on first launch)
     nanofetch automatically creates ~/.config/nanofetch/ and copies files from /usr/share/nanofetch/ into it.
 
     On subsequent launches:
-    The program reads configurations from ~/.config/nanofetch/.
+    The program reads configurations from ~/.config/nanofetch/.```
 
 📂 File Management
 Check file locations
