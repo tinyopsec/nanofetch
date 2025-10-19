@@ -105,6 +105,12 @@ On first launch, Nanofetch automatically:
 Nanofetch follows the XDG Base Directory specification:
 
 ```
+~/.config/nanofetch/       # User configuration (edit here)
+├── logo.txt               # Custom ASCII logo
+├── config.txt             # Gradient settings
+├── options.txt            # Toggle info fields
+└── settings.txt           # General settings
+
 /usr/share/nanofetch/      # System defaults (don't edit)
 ├── logo.txt
 ├── config.txt
