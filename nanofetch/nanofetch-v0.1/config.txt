@@ -1,2 +1,0 @@
-gradient_info=mono
-gradient_logo=rainbow
