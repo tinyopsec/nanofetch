@@ -73,7 +73,7 @@ makepkg -si
 ### From Source
 
 ```bash
-g++ -std=c++17 -O2 -o nanofetch nanofetch.cpp
+g++ -std=c++20 -O2 -o nanofetch nanofetch.cpp
 sudo install -Dm755 nanofetch /usr/bin/nanofetch
 sudo install -Dm644 logo.txt /usr/share/nanofetch/logo.txt
 sudo install -Dm644 config.txt /usr/share/nanofetch/config.txt
