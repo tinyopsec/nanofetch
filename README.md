@@ -157,6 +157,31 @@ max_label_width=13
 
 ---
 
+## 🛠️ Build from Source
+
+### Requirements
+
+- C++17 compatible compiler (GCC 7+, Clang 5+)
+- Linux with `/proc` filesystem
+- Standard Unix utilities (optional, for some features)
+
+### Compilation
+
+```bash
+g++ -std=c++17 -O2 -o nanofetch nanofetch.cpp
+```
+
+### Development
+
+```bash
+git clone https://github.com/runrakali/nanofetch.git
+cd nanofetch
+g++ -std=c++17 -g -o nanofetch nanofetch.cpp
+./nanofetch
+```
+
+---
+
 ## 🤝 Contributing
 
 Contributions are welcome! Please:
