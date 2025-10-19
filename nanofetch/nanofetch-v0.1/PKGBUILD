@@ -1,0 +1,33 @@
+pkgname=nanofetch
+pkgver=1.0.0
+pkgrel=1
+pkgdesc="A minimal system information fetch tool with gradient support"
+arch=('x86_64' 'i686' 'aarch64')
+url="https://github.com/yourusername/nanofetch"
+license=('MIT')
+depends=('gcc-libs')
+makedepends=('gcc')
+
+build() {
+    cd "$startdir"
+    g++ -std=c++17 -O2 -o nanofetch nanofetch.cpp
+}
+
+package() {
+    cd "$startdir"
+    
+    install -Dm755 nanofetch "$pkgdir/usr/bin/nanofetch"
+    
+    install -Dm644 logo.txt "$pkgdir/usr/share/nanofetch/logo.txt"
+    install -Dm644 config.txt "$pkgdir/usr/share/nanofetch/config.txt"
+    install -Dm644 options.txt "$pkgdir/usr/share/nanofetch/options.txt"
+    install -Dm644 settings.txt "$pkgdir/usr/share/nanofetch/settings.txt"
+    
+    if [ -f LICENSE ]; then
+        install -Dm644 LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+    fi
+    
+    if [ -f README.md ]; then
+        install -Dm644 README.md "$pkgdir/usr/share/doc/$pkgname/README.md"
+    fi
+}
