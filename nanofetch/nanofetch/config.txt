@@ -1,0 +1,2 @@
+gradient_info=aqua
+gradient_logo=neon

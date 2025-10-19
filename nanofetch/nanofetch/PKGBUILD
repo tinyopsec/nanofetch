@@ -1,0 +1,21 @@
+# Maintainer: tinyopsec
+pkgname=nanofetch
+pkgver=1.0
+pkgrel=1
+pkgdesc="A lightweight system information tool written in C++"
+arch=('x86_64')
+url="https://example.com/nanofetch"
+license=('MIT')
+depends=('glibc')
+source=('nanofetch.cpp' 'logo.txt' 'config.txt')
+sha256sums=('SKIP' 'SKIP' 'SKIP')
+
+build() {
+  g++ -std=c++17 -O2 nanofetch.cpp -o nanofetch
+}
+
+package() {
+  install -Dm755 nanofetch "$pkgdir/usr/bin/nanofetch"
+  install -Dm644 logo.txt "$pkgdir/usr/share/nanofetch/logo.txt"
+  install -Dm644 config.txt "$pkgdir/usr/share/nanofetch/config.txt"
+}
