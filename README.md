@@ -7,9 +7,9 @@
 [![GitHub commit activity](https://img.shields.io/github/commit-activity/m/runrakali/nanofetch)](https://github.com/runrakali/nanofetch/commits)
 [![Latest release](https://img.shields.io/github/v/release/runrakali/nanofetch?logo=github)](https://github.com/runrakali/nanofetch/releases)
 
-Nanofetch is a **lightweight, fast, and customizable** command-line tool for displaying system information in a visually clean way — inspired by [Neofetch](https://github.com/dylanaraps/neofetch) and [Fastfetch](https://github.com/fastfetch-cli/fastfetch).
+Nanofetch is a **lightweight, fast, and customizable** command-line tool for displaying system information in a visually clean way inspired by [Neofetch](https://github.com/dylanaraps/neofetch) and [Fastfetch](https://github.com/fastfetch-cli/fastfetch).
 
-Written in **C**, focused on **speed**, **simplicity**, and **clarity**.  
+Written in **C++**, focused on **speed**, **simplicity**, and **clarity**.  
 Its goal is to be a minimal yet flexible alternative to Fastfetch for users who prefer simplicity or smaller systems.
 
 > ⚡ Nanofetch currently supports only **Arch-based distributions** that use `makepkg`.
