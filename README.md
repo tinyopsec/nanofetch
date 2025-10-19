@@ -36,7 +36,56 @@ Planned future support:
 
 ## ⚙️ Installation
 
-### 🐧 Arch Linux and derivatives
-Simply download the appropriate file from the nanofetch folder and install it according to your distro — for example:
-```bash
-makepkg -si
+After installation via makepkg -si, the files will be located as follows:
+System files (installed by the package):
+bash
+/usr/bin/nanofetch                    # Executable file
+/usr/share/nanofetch/logo.txt         # Default system logo
+/usr/share/nanofetch/config.txt       # System gradient configuration
+/usr/share/nanofetch/options.txt      # System options
+/usr/share/nanofetch/settings.txt     # System settings
+
+User configurations (created on first launch):
+
+bash
+~/.config/nanofetch/logo.txt          # Your personal logo
+~/.config/nanofetch/config.txt        # Your gradients
+~/.config/nanofetch/options.txt       # Your options
+~/.config/nanofetch/settings.txt      # Your settings
+
+How it works:
+
+During installation: Files are copied to /usr/share/nanofetch/
+On first launch: nanofetch automatically:
+Creates ~/.config/nanofetch/
+Copies files from /usr/share/nanofetch/ to it
+
+On subsequent launches: Reads from ~/.config/nanofetch/
+
+Check file locations:
+
+bash
+# System files
+ls -la /usr/share/nanofetch/
+
+# User files (after first launch)
+ls -la ~/.config/nanofetch/
+
+# Which files were installed by the package
+pacman -Ql nanofetch
+
+Edit configuration:
+
+bash
+# Edit your personal settings
+nano ~/.config/nanofetch/config.txt
+
+# Change gradients
+nano ~/.config/nanofetch/config.txt
+
+# Change logo
+nano ~/.config/nanofetch/logo.txt
+
+Important: Edit the files in ~/.config/nanofetch/, not in /usr/share/nanofetch/, because system files
+
+Translated with DeepL.com (free version)
