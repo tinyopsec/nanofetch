@@ -1,11 +1,11 @@
 # Nanofetch
 
-[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/runrakali/nanofetch/ci.yml)](https://github.com/runrakali/nanofetch/actions)
-[![GitHub license](https://img.shields.io/github/license/runrakali/nanofetch)](LICENSE)
-[![GitHub contributors](https://img.shields.io/github/contributors/runrakali/nanofetch)](https://github.com/runrakali/nanofetch/graphs/contributors)
-[![GitHub top language](https://img.shields.io/github/languages/top/runrakali/nanofetch?logo=c)](https://github.com/runrakali/nanofetch)
-[![GitHub commit activity](https://img.shields.io/github/commit-activity/m/runrakali/nanofetch)](https://github.com/runrakali/nanofetch/commits)
-[![Latest release](https://img.shields.io/github/v/release/runrakali/nanofetch?logo=github)](https://github.com/runrakali/nanofetch/releases)
+[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/tinyopsec/nanofetch/ci.yml)](https://github.com/tinyopsec/nanofetch/actions)
+[![GitHub license](https://img.shields.io/github/license/tinyopsec/nanofetch)](LICENSE)
+[![GitHub contributors](https://img.shields.io/github/contributors/tinyopsec/nanofetch)](https://github.com/tinyopsec/nanofetch/graphs/contributors)
+[![GitHub top language](https://img.shields.io/github/languages/top/tinyopsec/nanofetch?logo=c)](https://github.com/tinyopsec/nanofetch)
+[![GitHub commit activity](https://img.shields.io/github/commit-activity/m/tinyopsec/nanofetch)](https://github.com/tinyopsec/nanofetch/commits)
+[![Latest release](https://img.shields.io/github/v/release/tinyopsec/nanofetch?logo=github)](https://github.com/tinyopsec/nanofetch/releases)
 
 A **lightweight, fast, and customizable** system information tool written in C++. Inspired by [Neofetch](https://github.com/dylanaraps/neofetch) and [Fastfetch](https://github.com/fastfetch-cli/fastfetch), Nanofetch focuses on speed, simplicity, and elegant output with gradient support.
 
