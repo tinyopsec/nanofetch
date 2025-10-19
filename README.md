@@ -23,20 +23,8 @@ nanofetch
 ---
 
 ## 🖼️ Preview
-
-```
-     ████████           OS: Arch Linux x86_64
-   ██        ██         Kernel: 6.6.10-arch1-1
-  ██          ██        Uptime: 2h 34m
- ██            ██       Packages: 1247 (pacman)
- ██    ████    ██       Shell: zsh 5.9
- ██            ██       CPU: Intel i7-9750H (12) @ 4.50GHz
-  ██          ██        Memory: 8192 MiB / 16384 MiB
-   ██        ██         GPU: NVIDIA GeForce GTX 1660 Ti
-     ████████           Terminal: kitty
-```
-
----
+![Nanofetch preview 1](https://github.com/tinyopsec/nanofetch/raw/main/screenshots/example01.png)
+![Nanofetch preview 2](https://github.com/tinyopsec/nanofetch/raw/main/screenshots/example02.png)
 
 ## ✨ Features
 
