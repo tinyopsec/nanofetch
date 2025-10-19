@@ -105,7 +105,7 @@ On first launch, Nanofetch automatically:
 Nanofetch follows the XDG Base Directory specification:
 
 ```
-~/.config/nanofetch/       # User configuration (edit here)
+~/home/<username>/.config/nanofetch/       # User configuration (edit here)
 ├── logo.txt               # Custom ASCII logo
 ├── config.txt             # Gradient settings
 ├── options.txt            # Toggle info fields
@@ -120,7 +120,7 @@ Nanofetch follows the XDG Base Directory specification:
 
 ### Gradient Themes
 
-Edit `~/.config/nanofetch/config.txt`:
+Edit `~home/<username>/.config/nanofetch/config.txt`:
 
 ```ini
 gradient_info=neon         # Info text gradient
@@ -131,7 +131,7 @@ gradient_logo=rainbow      # Logo gradient
 
 ### Toggle Information Fields
 
-Edit `~/.config/nanofetch/options.txt`:
+Edit `~/home/<username>/.config/nanofetch/options.txt`:
 
 ```ini
 os=true
@@ -176,7 +176,7 @@ g++ -std=c++17 -O2 -o nanofetch nanofetch.cpp
 ```bash
 git clone https://github.com/runrakali/nanofetch.git
 cd nanofetch
-g++ -std=c++17 -g -o nanofetch nanofetch.cpp
+g++ -std=c++20 -g -o nanofetch nanofetch.cpp
 ./nanofetch
 ```
 
@@ -194,7 +194,7 @@ Contributions are welcome! Please:
 
 ### Guidelines
 
-- Follow C++17 standards
+- Follow C++20 standards
 - Maintain XDG Base Directory compliance
 - Keep code clean and readable (no inline comments)
 - Test on multiple distributions when possible
