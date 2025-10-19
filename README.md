@@ -43,6 +43,7 @@ For example, on Arch-based systems:
 makepkg -si
 
 After installation via makepkg -si, the files will be located as follows:
+
 System files (installed by the package)
 
 /usr/bin/nanofetch                    # Executable file
@@ -60,17 +61,21 @@ User configuration (created on first launch)
 
 🧠 How It Works
 
-    During installation:
+During installation:
+
     Files are copied to /usr/share/nanofetch/.
 
-    On first launch:
-    nanofetch automatically creates ~/.config/nanofetch/ and copies files from /usr/share/nanofetch/ into it.
+On first launch:
 
-    On subsequent launches:
-    The program reads configurations from ~/.config/nanofetch/.```
+    Nanofetch automatically creates ~/.config/nanofetch/ and copies files from /usr/share/nanofetch/ into it.
+
+On subsequent launches:
+
+    The program reads configurations from ~/.config/nanofetch/.
 
 📂 File Management
-Check file locations
+
+Check file locations:
 
 # System files
 ls -la /usr/share/nanofetch/
@@ -81,7 +86,7 @@ ls -la ~/.config/nanofetch/
 # Check which files were installed by the package
 pacman -Ql nanofetch
 
-Edit configuration
+Edit configuration:
 
 # Edit your personal settings
 nano ~/.config/nanofetch/settings.txt
@@ -94,3 +99,49 @@ nano ~/.config/nanofetch/logo.txt
 
     ⚠️ Important:
     Always edit the files in ~/.config/nanofetch/, not in /usr/share/nanofetch/, because system files are overwritten on updates.
+
+📄 Example Configuration
+
+Here’s an example of default configuration files:
+
+config.txt
+
+gradient_info=mono
+gradient_logo=rainbow
+
+options.txt
+
+os=true
+kernel=true
+uptime=true
+packages=true
+shell=true
+display=true
+de=true
+wm=true
+theme=true
+icons=true
+font=true
+cursor=true
+terminal=true
+term_font=false
+cpu=true
+memory=true
+swap=true
+disk=true
+gpu=true
+local_ip=true
+locale=true
+
+settings.txt
+
+logo=logo.txt
+theme=cyan
+max_label_width=13
+
+    🖼️ The logo.txt file can contain any ASCII logo — feel free to use your own!
+
+📜 License
+
+This project is licensed under the MIT License
+.
