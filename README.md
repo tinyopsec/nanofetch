@@ -37,7 +37,6 @@ Planned future support:
 ## ⚙️ Installation
 
 ### 🐧 Arch Linux and derivatives
-
-```bash
 Simply download the appropriate file from the nanofetch folder and install it according to your distro — for example:
+```bash
 makepkg -si
