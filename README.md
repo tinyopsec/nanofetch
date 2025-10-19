@@ -39,6 +39,5 @@ Planned future support:
 ### 🐧 Arch Linux and derivatives
 
 ```bash
-git clone https://github.com/runrakali/nanofetch.git
-cd nanofetch
+Simply download the appropriate file from the nanofetch folder and install it according to your distro — for example:
 makepkg -si
