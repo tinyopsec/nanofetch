@@ -109,7 +109,7 @@ paru -R nanofetch
 ```bash
 sudo rm /usr/bin/nanofetch
 sudo rm -rf /usr/share/nanofetch
-rm -rf ~/.config/nanofetch
+rm -rf ~/home/<user>/.config/nanofetch
 ```
 
 ---
@@ -125,7 +125,7 @@ nanofetch
 ### First Launch
 
 On first run, Nanofetch automatically:
-1. Creates the configuration directory at `~/.config/nanofetch/`
+1. Creates the configuration directory at `~/home/<user>/.config/nanofetch/`
 2. Copies default configuration files from `/usr/share/nanofetch/`
 3. Displays your system information with default settings
 
@@ -153,7 +153,7 @@ Nanofetch follows the XDG Base Directory specification:
 
 ### Gradient Themes
 
-Customize your color schemes by editing `~/.config/nanofetch/config.txt`:
+Customize your color schemes by editing `~/home/<user>/.config/nanofetch/config.txt`:
 
 ```ini
 gradient_info=neon            # Gradient for system information text
@@ -180,7 +180,7 @@ gradient_logo=rainbow         # Gradient for ASCII logo
 
 ### Toggle Information Fields
 
-Control which system information is displayed by editing `~/.config/nanofetch/options.txt`:
+Control which system information is displayed by editing `~/home/<user>/.config/nanofetch/options.txt`:
 
 ```ini
 os=true                        # Operating system
@@ -203,7 +203,7 @@ Set any field to `false` to hide it from the output.
 
 ### Custom ASCII Logo
 
-Replace the default logo by editing `~/.config/nanofetch/logo.txt` with your own ASCII art. Alternatively, specify a different logo file in `~/.config/nanofetch/settings.txt`:
+Replace the default logo by editing `~/home/<user>/.config/nanofetch/logo.txt` with your own ASCII art. Alternatively, specify a different logo file in `~/.config/nanofetch/settings.txt`:
 
 ```ini
 logo=custom-logo.txt           # Path to custom logo file
