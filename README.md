@@ -14,8 +14,8 @@ A **lightweight, fast, and customizable** system information tool written in C++
 ## ⚡ Quick Start
 
 ```bash
-git clone https://github.com/runrakali/nanofetch.git
-cd nanofetch
+Download the nanofetch file from the repository
+cd /path/to/nanofetch
 makepkg -si
 nanofetch
 
