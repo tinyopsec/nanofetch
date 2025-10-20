@@ -3,109 +3,125 @@
 [![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/tinyopsec/nanofetch/ci.yml)](https://github.com/tinyopsec/nanofetch/actions)
 [![GitHub license](https://img.shields.io/github/license/tinyopsec/nanofetch)](LICENSE)
 [![GitHub contributors](https://img.shields.io/github/contributors/tinyopsec/nanofetch)](https://github.com/tinyopsec/nanofetch/graphs/contributors)
-[![GitHub top language](https://img.shields.io/github/languages/top/tinyopsec/nanofetch?logo=c%2B%2B)](https://github.com/tinyopsec/nanofetch)
+[![GitHub top language](https://img.shields.io/github/languages/top/tinyopsec/nanofetch?logo=c)](https://github.com/tinyopsec/nanofetch)
 [![GitHub commit activity](https://img.shields.io/github/commit-activity/m/tinyopsec/nanofetch)](https://github.com/tinyopsec/nanofetch/commits)
 [![Latest release](https://img.shields.io/github/v/release/tinyopsec/nanofetch?logo=github)](https://github.com/tinyopsec/nanofetch/releases)
 
-A **lightweight, fast, and customizable** system information tool written in C++.  
-Inspired by [Neofetch](https://github.com/dylanaraps/neofetch) and [Fastfetch](https://github.com/fastfetch-cli/fastfetch),  
-Nanofetch focuses on speed, simplicity, and elegant output with gradient support.
+A **lightweight, fast, and customizable** system information tool written in C++. Inspired by [Neofetch](https://github.com/dylanaraps/neofetch) and [Fastfetch](https://github.com/fastfetch-cli/fastfetch), Nanofetch focuses on speed, simplicity, and elegant output with gradient support.
 
 ---
 
 ## ⚡ Quick Start
 
 ```bash
-git clone https://github.com/tinyopsec/nanofetch.git
+git clone https://github.com/runrakali/nanofetch.git
 cd nanofetch
 makepkg -si
 nanofetch
+```
 
-🖼️ Preview
+---
 
-Nanofetch preview 1
-Nanofetch preview 2
-✨ Features
+## 🖼️ Preview
+![Nanofetch preview 1](https://github.com/tinyopsec/nanofetch/raw/main/screenshots/example01.png)
+![Nanofetch preview 2](https://github.com/tinyopsec/nanofetch/raw/main/screenshots/example02.png)
 
-    🚀 Blazing fast — written in modern C++17
+## ✨ Features
 
-    🎨 Gradient themes — 13 built-in color schemes (rainbow, neon, sunset, etc.)
+- 🚀 **Blazing fast** - Written in modern C++17
+- 🎨 **Gradient themes** - 13 built-in color schemes (rainbow, neon, sunset, etc.)
+- ⚙️ **Highly customizable** - Toggle any info field, use custom ASCII logos
+- 📁 **XDG compliant** - Follows XDG Base Directory specification
+- 🔧 **No dependencies** - Uses only standard Linux utilities
+- 🪶 **Minimal** - Single binary, small footprint
 
-    ⚙️ Highly customizable — toggle any info field, use custom ASCII logos
+---
 
-    📁 XDG compliant — follows XDG Base Directory specification
+## 🧩 Supported Platforms
 
-    🔧 No dependencies — uses only standard Linux utilities
+**Currently supported:**
+- ✅ Arch Linux and derivatives (Manjaro, EndeavourOS, Artix, etc.)
 
-    🪶 Minimal — single binary, small footprint
+**Planned support:**
+- 🔜 Debian/Ubuntu (`.deb`)
+- 🔜 Fedora/RHEL (`.rpm`)
+- 🔜 Void, Gentoo, Alpine
+- 🔜 BSD variants
 
-📦 Installation
-🧩 Method 1 — Install from AUR (recommended)
+---
 
-If you use an AUR helper like yay
+## 📦 Installation
 
-:
+### Arch Linux
 
-yay -S nanofetch
-
-    This will automatically download, build, and install Nanofetch from AUR.
-
-🧰 Method 2 — Build manually with makepkg
-
-git clone https://github.com/tinyopsec/nanofetch.git
-cd nanofetch
+```bash
 makepkg -si
+```
 
-🧱 Method 3 — Build and install manually (from source)
+### From Source
 
+```bash
 g++ -std=c++20 -O2 -o nanofetch nanofetch.cpp
 sudo install -Dm755 nanofetch /usr/bin/nanofetch
 sudo install -Dm644 logo.txt /usr/share/nanofetch/logo.txt
 sudo install -Dm644 config.txt /usr/share/nanofetch/config.txt
 sudo install -Dm644 options.txt /usr/share/nanofetch/options.txt
 sudo install -Dm644 settings.txt /usr/share/nanofetch/settings.txt
+```
 
-🚀 Usage
+---
 
+## 🚀 Usage
+
+Simply run:
+
+```bash
 nanofetch
+```
 
 On first launch, Nanofetch automatically:
+1. Creates `~/.config/nanofetch/`
+2. Copies default configs from `/usr/share/nanofetch/`
+3. Displays your system information
 
-    Creates ~/.config/nanofetch/
+---
 
-    Copies default configs from /usr/share/nanofetch/
+## ⚙️ Configuration
 
-    Displays your system information
+### File Locations
 
-⚙️ Configuration
+Nanofetch follows the XDG Base Directory specification:
 
-Nanofetch follows the XDG Base Directory specification.
-Default Locations
+```
+~/home/<username>/.config/nanofetch/       # User configuration (edit here)
+├── logo.txt               # Custom ASCII logo
+├── config.txt             # Gradient settings
+├── options.txt            # Toggle info fields
+└── settings.txt           # General settings
 
-~/.config/nanofetch/          # User configuration
+/usr/share/nanofetch/      # System defaults (don't edit)
 ├── logo.txt
 ├── config.txt
 ├── options.txt
 └── settings.txt
+```
 
-/usr/share/nanofetch/         # System defaults
-├── logo.txt
-├── config.txt
-├── options.txt
-└── settings.txt
+### Gradient Themes
 
-Example: Gradient Configuration
+Edit `~home/<username>/.config/nanofetch/config.txt`:
 
-Edit ~/.config/nanofetch/config.txt:
+```ini
+gradient_info=neon         # Info text gradient
+gradient_logo=rainbow      # Logo gradient
+```
 
-gradient_info=neon
-gradient_logo=rainbow
+**Available gradients:** `mono`, `blue`, `red`, `green`, `purple`, `orange`, `neon`, `aqua`, `sunset`, `forest`, `rainbow`, `magenta`, `gray`
 
-Available gradients: mono, blue, red, green, purple, orange, neon, aqua, sunset, forest, rainbow, magenta, gray
-Example: Info Fields Toggle
+### Toggle Information Fields
 
-Edit ~/.config/nanofetch/options.txt:
+Edit `~/home/<username>/.config/nanofetch/options.txt`:
 
+```ini
 os=true
 kernel=true
 uptime=true
@@ -114,74 +130,107 @@ shell=true
 cpu=true
 memory=true
 gpu=true
+# ... set any to false to hide
+```
 
-Example: Custom Logo
+### Customize Logo
 
-Edit ~/.config/nanofetch/settings.txt:
+Replace `~/.config/nanofetch/logo.txt` with your own ASCII art, or change the path in `settings.txt`:
 
+```ini
 logo=custom-logo.txt
 theme=cyan
 max_label_width=13
+```
 
-🧰 Build from Source
-Requirements
+---
 
-    GCC 7+ or Clang 5+
+## 🛠️ Build from Source
 
-    Linux with /proc
+### Requirements
 
-    Standard Unix utilities (optional)
+- C++17 compatible compiler (GCC 7+, Clang 5+)
+- Linux with `/proc` filesystem
+- Standard Unix utilities (optional, for some features)
 
-Compile
+### Compilation
 
-g++ -std=c++20 -O2 -o nanofetch nanofetch.cpp
+```bash
+g++ -std=c++17 -O2 -o nanofetch nanofetch.cpp
+```
 
-Develop
+### Development
 
-git clone https://github.com/tinyopsec/nanofetch.git
+```bash
+git clone https://github.com/runrakali/nanofetch.git
 cd nanofetch
 g++ -std=c++20 -g -o nanofetch nanofetch.cpp
 ./nanofetch
+```
 
-📋 Roadmap
+---
 
-Distro detection for Debian/Ubuntu
+## 🤝 Contributing
 
-.deb and .rpm package builds
+Contributions are welcome! Please:
 
-GPU temperature and usage
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
-Battery and network info
+### Guidelines
 
-Custom color themes
+- Follow C++20 standards
+- Maintain XDG Base Directory compliance
+- Keep code clean and readable (no inline comments)
+- Test on multiple distributions when possible
 
-    Image/logo (kitty/sixel) support
+---
 
-🐛 Known Issues
+## 📋 Roadmap
 
-    Font detection limited
+- [ ] Add distro detection for Debian/Ubuntu
+- [ ] Support for `.deb` and `.rpm` packages
+- [ ] GPU temperature and usage stats
+- [ ] Network interface information
+- [ ] Battery status for laptops
+- [ ] Custom color definitions
+- [ ] Image/logo support (via kitty/sixel)
 
-    xrandr required for display info (X11 only)
+---
 
-    Some GTK data needs gsettings
+## 🐛 Known Issues
 
-📜 License
+- Terminal font detection is limited
+- Display resolution detection requires `xrandr` (X11 only)
+- Some GTK theme info requires `gsettings`
 
-This project is licensed under the MIT License
+---
 
-.
-🙏 Acknowledgments
+## 📜 License
 
-    Neofetch
+This project is licensed under the [MIT License](LICENSE).
 
-— Dylan Araps
+---
 
-Fastfetch
+## 🙏 Acknowledgments
 
-— contributors
+- Inspired by [Neofetch](https://github.com/dylanaraps/neofetch) by Dylan Araps
+- Inspired by [Fastfetch](https://github.com/fastfetch-cli/fastfetch)
+- Thanks to all [contributors](https://github.com/runrakali/nanofetch/graphs/contributors)
 
-Contributors
+---
+
+## 📞 Support
+
+- 🐛 [Report bugs](https://github.com/runrakali/nanofetch/issues)
+- 💡 [Request features](https://github.com/runrakali/nanofetch/issues)
+- ⭐ Star the project if you like it!
+
+---
+
 <div align="center">
-
-⭐ Made with ❤️ by tech hat and the Nanofetch community ⭐
-</div> ```
+Made with ❤️ by the Nanofetch community
+</div>
