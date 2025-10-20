@@ -18,6 +18,10 @@ git clone https://github.com/runrakali/nanofetch.git
 cd nanofetch
 makepkg -si
 nanofetch
+
+or
+
+yay -S nanofetch (Only on arch-based systems is YAY needed)
 ```
 
 ---
