@@ -138,7 +138,7 @@ On first run, Nanofetch automatically:
 Nanofetch follows the XDG Base Directory specification:
 
 ```
-~/.config/nanofetch/           # User configuration (edit these)
+~/home/<user>/.config/nanofetch/           # User configuration (edit these)
 ├── logo.txt                   # Custom ASCII logo
 ├── config.txt                 # Gradient theme settings
 ├── options.txt                # Toggle information fields
