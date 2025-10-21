@@ -78,7 +78,7 @@ makepkg -si
 For manual installation on any Linux distribution:
 
 ```bash
-git clone https://github.com/tinyopsec/nanofetch.git
+install folder nanofetch
 cd nanofetch
 g++ -std=c++17 -O2 -o nanofetch nanofetch.cpp
 sudo install -Dm755 nanofetch /usr/bin/nanofetch
